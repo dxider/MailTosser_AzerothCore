@@ -1,4 +1,4 @@
-﻿namespace Mail_Tosser_1._4
+﻿namespace Mail_Tosser
 {
     partial class Npcs
     {
@@ -48,7 +48,7 @@
             // btnSel
             // 
             this.btnSel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSel.Image = global::Mail_Tosser_1._4.Properties.Resources.accept;
+            this.btnSel.Image = global::Mail_Tosser.Properties.Resources.accept;
             this.btnSel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSel.Location = new System.Drawing.Point(232, 280);
             this.btnSel.Name = "btnSel";
@@ -70,7 +70,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Mail_Tosser_1._4.Properties.Resources.magnifier;
+            this.pictureBox1.Image = global::Mail_Tosser.Properties.Resources.magnifier;
             this.pictureBox1.Location = new System.Drawing.Point(177, 284);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);

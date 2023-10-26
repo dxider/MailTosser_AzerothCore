@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mail_Tosser_1._4.Classes
+namespace Mail_Tosser.Classes
 {
     public class Item
     {

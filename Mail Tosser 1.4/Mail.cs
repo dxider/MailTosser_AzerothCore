@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
-namespace Mail_Tosser_1._4
+namespace Mail_Tosser
 {
     class Mail
     {

@@ -1,4 +1,4 @@
-﻿namespace Mail_Tosser_1._4
+﻿namespace Mail_Tosser
 {
     partial class Settings
     {
@@ -186,7 +186,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = global::Mail_Tosser_1._4.Properties.Resources.database_black;
+            this.pictureBox7.Image = global::Mail_Tosser.Properties.Resources.database_black;
             this.pictureBox7.Location = new System.Drawing.Point(218, 188);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(16, 16);
@@ -198,7 +198,7 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = global::Mail_Tosser_1._4.Properties.Resources.door_in;
+            this.btnExit.Image = global::Mail_Tosser.Properties.Resources.door_in;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExit.Location = new System.Drawing.Point(118, 311);
             this.btnExit.Name = "btnExit";
@@ -211,7 +211,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = global::Mail_Tosser_1._4.Properties.Resources.database_yellow;
+            this.pictureBox6.Image = global::Mail_Tosser.Properties.Resources.database_yellow;
             this.pictureBox6.Location = new System.Drawing.Point(218, 229);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(16, 16);
@@ -220,7 +220,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Mail_Tosser_1._4.Properties.Resources.database;
+            this.pictureBox5.Image = global::Mail_Tosser.Properties.Resources.database;
             this.pictureBox5.Location = new System.Drawing.Point(119, 185);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(16, 16);
@@ -230,7 +230,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Mail_Tosser_1._4.Properties.Resources.router;
+            this.pictureBox4.Image = global::Mail_Tosser.Properties.Resources.router;
             this.pictureBox4.Location = new System.Drawing.Point(218, 141);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(16, 16);
@@ -240,7 +240,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Mail_Tosser_1._4.Properties.Resources.key_solid;
+            this.pictureBox3.Image = global::Mail_Tosser.Properties.Resources.key_solid;
             this.pictureBox3.Location = new System.Drawing.Point(218, 97);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
@@ -250,7 +250,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Mail_Tosser_1._4.Properties.Resources.user_silhouette;
+            this.pictureBox2.Image = global::Mail_Tosser.Properties.Resources.user_silhouette;
             this.pictureBox2.Location = new System.Drawing.Point(218, 53);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
@@ -260,7 +260,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Mail_Tosser_1._4.Properties.Resources.server;
+            this.pictureBox1.Image = global::Mail_Tosser.Properties.Resources.server;
             this.pictureBox1.Location = new System.Drawing.Point(218, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
@@ -271,7 +271,7 @@
             // 
             this.btnConn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConn.Image = global::Mail_Tosser_1._4.Properties.Resources.server_connect;
+            this.btnConn.Image = global::Mail_Tosser.Properties.Resources.server_connect;
             this.btnConn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConn.Location = new System.Drawing.Point(118, 276);
             this.btnConn.Name = "btnConn";

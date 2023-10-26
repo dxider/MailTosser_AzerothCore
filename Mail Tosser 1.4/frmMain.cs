@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.Windows;
 using MySql.Data.MySqlClient;
 using System.Reflection;
-using Mail_Tosser_1._4.Classes;
+using Mail_Tosser.Classes;
 /* Life runs on code */
-namespace Mail_Tosser_1._4
+namespace Mail_Tosser
 {
     public partial class frmMain : Form
     {
@@ -21,7 +21,7 @@ namespace Mail_Tosser_1._4
         Connection con = new Connection();
         Npcs npcsfrm = new Npcs();
 
-        List<Mail_Tosser_1._4.Classes.Item> items = new List<Mail_Tosser_1._4.Classes.Item>();
+        List<Mail_Tosser.Classes.Item> items = new List<Mail_Tosser.Classes.Item>();
 
         public static List<string> attitems = new List<string>();
         public static List<string> names = new List<string>();
@@ -65,6 +65,7 @@ namespace Mail_Tosser_1._4
             dat = dat.AddDays(30);
 
             dtpExp.SelectionRange.Start = dat;
+            dtpExp.SelectionRange.End = dat;
 
             if (con.worldconn.State != ConnectionState.Open)
             {
@@ -78,24 +79,10 @@ namespace Mail_Tosser_1._4
                     frm.ShowDialog();
                 }
             }
-            MySqlCommand cmd = new MySqlCommand("SELECT `name`, `entry` FROM `item_template`", con.worldconn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            lstSearchItems.Items.Clear();
-            lstSearchItems.BeginUpdate();
-            while (reader.Read())
-            {
-                Mail_Tosser_1._4.Classes.Item it = new Mail_Tosser_1._4.Classes.Item();
-                it.Entry = reader.GetInt32("entry");
-                it.Name = reader.GetString("name");
-                items.Add(it);
-                ListViewItem item = lstSearchItems.Items.Add(it.Entry.ToString());
-                item.SubItems.Add(it.Name);
-            }
-            lstSearchItems.EndUpdate();
-            reader.Close();
+            
 
-            cmd = new MySqlCommand("SELECT `name` FROM `characters`;", con.charconn);
-            reader = cmd.ExecuteReader();
+            MySqlCommand cmd = new MySqlCommand("SELECT `name` FROM `characters`;", con.charconn);
+            MySqlDataReader reader = cmd.ExecuteReader();
             txtSender.Items.Clear();
             while (reader.Read())
             {
@@ -131,15 +118,9 @@ namespace Mail_Tosser_1._4
             }
             catch
             {
-                btnSett_Click(btnSett, EventArgs.Empty);
                 con = new Connection();
             }
             if (selnames.Count > 0) btnRec.Text = selnames.Count.ToString() + " receivers";
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnAddSelected(object sender, EventArgs e)
@@ -184,15 +165,6 @@ namespace Mail_Tosser_1._4
         private void btnClear_Click(object sender, EventArgs e)
         {
             lstSelectedItems.Items.Clear();
-        }
-
-        private void btnRec_Click(object sender, EventArgs e)
-        {
-            Recs recs = new Recs();
-            recs.ShowDialog();
-            lstReceivers.Items.Clear();
-            foreach (string receiver in selnames)
-                lstReceivers.Items.Add(receiver);
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -328,13 +300,6 @@ namespace Mail_Tosser_1._4
             this.Cursor = Cursors.Default;
         }
 
-        private void txtSQL_Click(object sender, EventArgs e)
-        {
-        //    List<string> lst = new List<string>();
-        //    lst.Add("[20] BREAD {2000}");
-        //    con.ExecuteItems(20, 4, lst);
-        }
-
         private void btnHelp_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.ac-web.org/forums/showthread.php?198490-Release-Mail-Tosser-1-4&p=2034735#post2034735");
@@ -383,28 +348,50 @@ namespace Mail_Tosser_1._4
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
+                SearchItems();
+        }
+
+        private void picSearch_Click(object sender, EventArgs e)
+        {
+            SearchItems();
+        }
+
+        private void SearchItems()
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT `name`, `entry` FROM `item_template` WHERE name LIKE '%" + txtSearch.Text.Replace("'","''") + "%'", con.worldconn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            lstSearchItems.Items.Clear();
+            lstSearchItems.BeginUpdate();
+            while (reader.Read())
             {
-                lstSearchItems.Items.Clear();
-                if (txtSearch.Text == "")
-                {
-                    foreach (Classes.Item it in items)
-                    {
-                        ListViewItem item = lstSearchItems.Items.Add(it.Entry.ToString());
-                        item.SubItems.Add(it.Name);
-                    }
-                }
-                else
-                {
-                    foreach (Classes.Item it in items)
-                    {
-                        if (it.Name.Contains(txtSearch.Text))
-                        {
-                            ListViewItem item = lstSearchItems.Items.Add(it.Entry.ToString());
-                            item.SubItems.Add(it.Name);
-                        }
-                    }
-                }
+                Classes.Item it = new Classes.Item();
+                it.Entry = reader.GetInt32("entry");
+                it.Name = reader.GetString("name");
+                items.Add(it);
+                ListViewItem item = lstSearchItems.Items.Add(it.Entry.ToString());
+                item.SubItems.Add(it.Name);
             }
+            lstSearchItems.EndUpdate();
+            reader.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRec_Click_1(object sender, EventArgs e)
+        {
+            Recs recs = new Recs();
+            recs.ShowDialog();
+            lstReceivers.Items.Clear();
+            foreach (string receiver in selnames)
+                lstReceivers.Items.Add(receiver);
         }
     }
 }

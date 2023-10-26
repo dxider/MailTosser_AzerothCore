@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Mail_Tosser_1._4
+namespace Mail_Tosser
 {
     public partial class Recs : Form
     {

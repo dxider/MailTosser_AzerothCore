@@ -1,4 +1,4 @@
-﻿namespace Mail_Tosser_1._4
+﻿namespace Mail_Tosser
 {
     partial class Recs
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mail_Tosser_1._4
+namespace Mail_Tosser
 {
     static class Program
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{AB6A2943-C981-4F8A-8F69-1CC679B76339}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mail_Tosser_1._4</RootNamespace>
-    <AssemblyName>Mail Tosser 1.4.37</AssemblyName>
+    <RootNamespace>Mail_Tosser</RootNamespace>
+    <AssemblyName>Mail Tosser</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
